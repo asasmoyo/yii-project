@@ -1,0 +1,7 @@
+.idea
+nbproject
+
+/app/assets/
+/app/protected/data/testdrive.db
+/app/protected/runtime/
+/vendor/
