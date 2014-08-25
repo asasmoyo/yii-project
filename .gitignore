@@ -1,6 +1,7 @@
 .idea
 nbproject
 
+/composer.lock
 /app/assets/
 /app/protected/data/testdrive.db
 /app/protected/runtime/

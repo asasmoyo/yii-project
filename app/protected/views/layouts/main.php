@@ -1,67 +1,88 @@
-<?php /* @var $this Controller */ ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="language" content="en"/>
+    <meta charset="utf-8">
+    <title><?php echo Yii::app()->name; ?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- blueprint CSS framework -->
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css"
-          media="screen, projection"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css"
-          media="print"/>
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css"
-          media="screen, projection"/>
-    <![endif]-->
+    <!-- Le styles -->
+    <style>
+        /* Sticky footer styles
+        -------------------------------------------------- */
+        html,
+        body {
+            height: 100%;
+            /* The html and body elements cannot have any padding or margin. */
+        }
 
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css"/>
+        /* Wrapper for page content to push down footer */
+        #wrap {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            /* Negative indent footer by it's height */
+            margin: 0 auto -60px;
+        }
 
-    <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+        /* Set the fixed height of the footer here */
+        #push,
+        #footer {
+            height: 60px;
+        }
+
+        #footer {
+            background-color: #f5f5f5;
+        }
+
+        /* Lastly, apply responsive CSS fixes as necessary */
+        @media (max-width: 767px) {
+            #footer {
+                margin-left: -20px;
+                margin-right: -20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        #wrap > .container {
+            padding-top: 60px;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container" id="page">
+<?php
+$this->widget('bootstrap.widgets.TbNavbar',
+    array(
+        'type' => 'inverse',
+        'brand' => Yii::app()->name,
+        'brandUrl' => Yii::app()->getHomeUrl(),
+        'fixed' => 'top',
+        'items' => array(
+            array(
+                'class' => 'bootstrap.widgets.TbMenu',
+                'items' => $this->menu_bar,
+            )
+        )
+    )
+);
+?>
 
-    <div id="header">
-        <div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+<div id="wrap">
+    <div class="container">
+        <?php echo $content; ?>
     </div>
-    <!-- header -->
-
-    <div id="mainmenu">
-        <?php $this->widget('zii.widgets.CMenu', array(
-            'items' => array(
-                array('label' => 'Home', 'url' => array('/site/index')),
-                array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-                array('label' => 'Contact', 'url' => array('/site/contact')),
-                array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
-                array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
-            ),
-        )); ?>
-    </div>
-    <!-- mainmenu -->
-    <?php if (isset($this->breadcrumbs)): ?>
-        <?php $this->widget('zii.widgets.CBreadcrumbs', array(
-            'links' => $this->breadcrumbs,
-        )); ?><!-- breadcrumbs -->
-    <?php endif ?>
-
-    <?php echo $content; ?>
-
-    <div class="clear"></div>
-
-    <div id="footer">
-        Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-        All Rights Reserved.<br/>
-        <?php echo Yii::powered(); ?>
-    </div>
-    <!-- footer -->
-
 </div>
-<!-- page -->
+
+<div id="footer">
+    <div class="container">
+        <p class="muted credit">Copyright &copy; <a href="/">Company</a> <?php echo date('Y'); ?></p>
+    </div>
+</div>
+
 
 </body>
 </html>
