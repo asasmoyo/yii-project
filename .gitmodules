@@ -1,0 +1,3 @@
+[submodule "app\\protected\\extensions\\yii-debug-toolbar"]
+	path = app\\protected\\extensions\\yii-debug-toolbar
+	url = https://github.com/malyshev/yii-debug-toolbar
