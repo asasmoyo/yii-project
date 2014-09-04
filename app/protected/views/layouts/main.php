@@ -49,6 +49,10 @@
         #wrap > .container {
             padding-top: 60px;
         }
+
+        .container .credit {
+            margin: 20px 0;
+        }
     </style>
 </head>
 

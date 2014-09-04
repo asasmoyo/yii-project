@@ -14,8 +14,8 @@ class BaseAdministratorController extends Controller
     {
         return array(
             array('allow',
-                'actions' => array('login'),
-                'users' => array('?'),
+                'actions' => array('login', 'error', 'logout'),
+                'users' => array('*'),
             ),
             array('allow',
                 'users' => array('@'),
