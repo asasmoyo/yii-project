@@ -30,16 +30,15 @@ class BaseAdministratorController extends Controller
     {
         $this->side_bar = array(
             array(
-                'label' => 'Navigasi',
-                'itemOptions' => array('class' => 'nav-header')
-            ),
-            array(
                 'label' => 'Home',
                 'url' => Yii::app()->getHomeUrl(),
+                'icon' => 'home',
+                'active' => $this->getId() == 'default' && $this->getAction()->getId() == 'index',
             ),
             array(
                 'label' => 'Logout',
                 'url' => $this->createUrl('/administrator/default/logout'),
+                'icon' => 'off',
             ),
         );
         return parent::beforeAction($action);

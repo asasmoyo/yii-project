@@ -2,91 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title><?php echo Yii::app()->name; ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
-    <style>
-        /* Sticky footer styles
-        -------------------------------------------------- */
-        html,
-        body {
-            height: 100%;
-            /* The html and body elements cannot have any padding or margin. */
-        }
+    <title><?php echo Yii::app()->name; ?></title>
 
-        /* Wrapper for page content to push down footer */
-        #wrap {
-            min-height: 100%;
-            height: auto !important;
-            height: 100%;
-            /* Negative indent footer by it's height */
-            margin: 0 auto -60px;
-        }
+    <!-- Custom styles for this template -->
+    <link href="<?php echo Yii::app()->getBaseUrl(true) . '/css/navbar-static-top.css'; ?>" rel="stylesheet">
 
-        /* Set the fixed height of the footer here */
-        #push,
-        #footer {
-            height: 60px;
-        }
-
-        #footer {
-            background-color: #f5f5f5;
-        }
-
-        /* Lastly, apply responsive CSS fixes as necessary */
-        @media (max-width: 767px) {
-            #footer {
-                margin-left: -20px;
-                margin-right: -20px;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-        }
-
-        #wrap > .container {
-            padding-top: 60px;
-        }
-
-        .container .credit {
-            margin: 20px 0;
-        }
-    </style>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
 
 <?php
-$this->widget('bootstrap.widgets.TbNavbar',
-    array(
-        'type' => 'inverse',
-        'brand' => Yii::app()->name,
-        'brandUrl' => Yii::app()->getHomeUrl(),
-        'fixed' => 'top',
-        'items' => array(
-            array(
-                'class' => 'bootstrap.widgets.TbMenu',
-                'items' => $this->menu_bar,
-            )
-        )
-    )
-);
+$this->widget('booster.widgets.TbNavbar', array(
+    'brand' => Yii::app()->name,
+    'fixed' => 'top',
+    'fluid' => false,
+    'items' => array(),
+));
 ?>
 
-<div id="wrap">
-    <div class="container">
-        <?php echo $content; ?>
-    </div>
+<div class="container">
+    <?php echo $content; ?>
 </div>
 
-<div id="footer">
+<div class="footer">
     <div class="container">
-        <p class="muted credit">Copyright &copy; <a href="/">Company</a> <?php echo date('Y'); ?></p>
+        <p class="text-muted">
+            Copyright &copy; <a href="<?php echo Yii::app()->getBaseUrl(true); ?>">Company</a> <?php echo date('Y'); ?>
+        </p>
     </div>
 </div>
-
 
 </body>
 </html>

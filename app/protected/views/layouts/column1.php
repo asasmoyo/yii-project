@@ -1,20 +1,23 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
-    <div id="content">
-        <h2>
-            <?php echo $this->page_header; ?>
-            <small><?php echo $this->sub_page_header; ?></small>
-        </h2>
-        <?php
-        $this->widget('bootstrap.widgets.TbAlert', array(
-            'block' => true,
-            'fade' => true,
-            'closeText' => '&times;',
-            'events' => array(),
-            'htmlOptions' => array(),
-            'userComponentId' => 'user',
-        ));
-        ?>
-        <?php echo $content; ?>
-    </div><!-- content -->
+    <div class="row">
+        <div class="col-md-12">
+            <?php
+            $this->widget('booster.widgets.TbAlert', array(
+                'fade' => true,
+                'closeText' => '&times;',
+                'events' => array(),
+                'htmlOptions' => array(),
+                'userComponentId' => 'user',
+            ));
+            ?>
+
+            <h2>
+                <?php echo $this->page_header; ?>
+                <small><?php echo $this->sub_page_header; ?></small>
+            </h2>
+
+            <?php echo $content; ?>
+        </div>
+    </div>
 <?php $this->endContent(); ?>

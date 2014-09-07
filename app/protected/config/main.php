@@ -12,7 +12,7 @@ return array(
     // preloading 'log' component
     'preload' => array(
         'log',
-        'bootstrap',
+        'booster',
     ),
 
     // autoloading model and component classes
@@ -20,6 +20,8 @@ return array(
         'application.models.*',
         'application.components.*',
         'application.components.baseController.*',
+        'application.libraries.*',
+        'application.libraries.widgets.*',
         'vendor.*',
     ),
 
@@ -36,8 +38,8 @@ return array(
 
     // application components
     'components' => array(
-        'bootstrap' => array(
-            'class' => 'vendor.clevertech.yii-booster.src.components.Bootstrap',
+        'booster' => array(
+            'class' => 'vendor.clevertech.yii-booster.src.components.Booster',
             'responsiveCss' => false,
         ),
         'user' => array(

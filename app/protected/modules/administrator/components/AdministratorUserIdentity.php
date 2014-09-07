@@ -7,14 +7,6 @@ class AdministratorUserIdentity extends CUserIdentity
 
     private $_id;
 
-    /**
-     * Authenticates a user.
-     * The example implementation makes sure if the username and password
-     * are both 'demo'.
-     * In practical applications, this should be changed to authenticate
-     * against some persistent user identity storage (e.g. database).
-     * @return boolean whether authentication succeeds.
-     */
     public function authenticate()
     {
         $admin = Admin::model()->findByAttributes(array(
@@ -23,21 +15,19 @@ class AdministratorUserIdentity extends CUserIdentity
 
         if (!isset($admin)) {
             $this->errorCode = self::ERROR_INVALID_USERNAME_OR_PASSWORD;
-        } elseif ($admin->username != $this->username) {
-            $this->errorCode = self::ERROR_INVALID_USERNAME_OR_PASSWORD;
-        } elseif (!$this->validatePassword($admin->password, $this->password)) {
+        } elseif (!$this->validatePassword($this->password, $admin->hashed_password, $admin->salt)) {
             $this->errorCode = self::ERROR_INVALID_USERNAME_OR_PASSWORD;
         } else {
-            $this->_id = 0;
+            $this->_id = $admin->id;
             $this->username = $admin->username;
             $this->errorCode = self::ERROR_NONE;
         }
         return !$this->errorCode;
     }
 
-    private function validatePassword($password, $passwordAttempt)
+    private function validatePassword($password_attempt, $hashed_password, $salt)
     {
-        return $password == md5($passwordAttempt);
+        return Hash::validatePassword($password_attempt, $salt, $hashed_password);
     }
 
     public function getId()

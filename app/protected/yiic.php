@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Jakarta');
 
 // change the following paths if necessary
 $yiic = dirname(__FILE__) . '/../../vendor/yiisoft/yii/framework/yiic.php';

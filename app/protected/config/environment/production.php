@@ -1,16 +1,13 @@
 <?php
 
-return CMap::mergeArray(
-    require(dirname(__FILE__) . '/../main.php'),
-    array(
-        'components' => array(
-            'db' => array(
-                'connectionString' => 'mysql:host=localhost;dbname=testdrive',
-                'emulatePrepare' => true,
-                'username' => 'root',
-                'password' => '',
-                'charset' => 'utf8',
-            ),
+return array(
+    'components' => array(
+        'db' => array(
+            'connectionString' => 'mysql:host=localhost;dbname=testdrive',
+            'emulatePrepare' => true,
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
         ),
-    )
+    ),
 );
