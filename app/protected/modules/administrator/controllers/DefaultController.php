@@ -36,6 +36,7 @@ class DefaultController extends BaseAdministratorController
 
     public function actionError()
     {
+        $this->layout = '//layouts/column1';
         if ($error = Yii::app()->errorHandler->error) {
             $this->render('error', $error);
         }

@@ -12,10 +12,12 @@
             ));
             ?>
 
-            <h2>
-                <?php echo $this->page_header; ?>
-                <small><?php echo $this->sub_page_header; ?></small>
-            </h2>
+            <div class="page-header">
+                <h2>
+                    <?php echo $this->page_header; ?>
+                    <small><?php echo $this->sub_page_header; ?></small>
+                </h2>
+            </div>
 
             <?php echo $content; ?>
         </div>

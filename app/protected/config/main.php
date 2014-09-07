@@ -33,6 +33,9 @@ return array(
             'password' => 'gii',
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters' => array('*'),
+            'generatorPaths' => array(
+                'booster.gii'
+            )
         ),
     ),
 
