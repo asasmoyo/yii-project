@@ -5,7 +5,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        $this->render('asd');
+        $this->render('index');
     }
 
     public function actionError()
