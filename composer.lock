@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ffe6ca66b8bdda6921932e6d3973fc73",
+    "hash": "175eee2ce1a06f120cd592ff6ed2c59c",
     "packages": [
         {
             "name": "clevertech/yii-booster",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevertech/YiiBooster.git",
-                "reference": "c94daa1861b8c28c31dc5cc9c450af72b64b9103"
+                "reference": "19b63c69d1eab35812e2c8ad8a3483e427554a7d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevertech/YiiBooster/zipball/c94daa1861b8c28c31dc5cc9c450af72b64b9103",
-                "reference": "c94daa1861b8c28c31dc5cc9c450af72b64b9103",
+                "url": "https://api.github.com/repos/clevertech/YiiBooster/zipball/19b63c69d1eab35812e2c8ad8a3483e427554a7d",
+                "reference": "19b63c69d1eab35812e2c8ad8a3483e427554a7d",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,60 @@
                 "bootstrap",
                 "yii"
             ],
-            "time": "2014-09-03 19:55:20"
+            "time": "2014-09-12 18:46:27"
+        },
+        {
+            "name": "phpmailer/phpmailer",
+            "version": "v5.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPMailer/PHPMailer.git",
+                "reference": "d3802c597bff8f6c2ccfa3eab2a511aa01b8d68f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/d3802c597bff8f6c2ccfa3eab2a511aa01b8d68f",
+                "reference": "d3802c597bff8f6c2ccfa3eab2a511aa01b8d68f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "*",
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class.phpmailer.php",
+                    "class.pop3.php",
+                    "class.smtp.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                },
+                {
+                    "name": "Marcus Bointon",
+                    "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Andy Prevost",
+                    "email": "codeworxtech@users.sourceforge.net"
+                },
+                {
+                    "name": "Brent R. Matzelle"
+                }
+            ],
+            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "time": "2014-05-14 07:04:18"
         },
         {
             "name": "yiisoft/yii",
@@ -151,21 +204,13 @@
             "time": "2014-06-30 00:14:27"
         }
     ],
-    "packages-dev": [
-
-    ],
-    "aliases": [
-
-    ],
+    "packages-dev": [],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "clevertech/yii-booster": 20
     },
     "prefer-stable": false,
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "platform": [],
+    "platform-dev": []
 }

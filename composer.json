@@ -2,7 +2,8 @@
     "name": "asasmoyo/project-yii",
     "require": {
         "yiisoft/yii": "1.1.15",
-        "clevertech/yii-booster": "dev-master"
+        "clevertech/yii-booster": "dev-master",
+        "phpmailer/phpmailer": "5.2.8"
     },
     "authors": [
         {

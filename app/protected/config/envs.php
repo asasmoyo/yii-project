@@ -1,4 +1,4 @@
 <?php
 return array(
-    'HOSTNAME' => 'development',
+    'asasmoyo-laptop' => 'development',
 );
