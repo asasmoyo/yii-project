@@ -3,12 +3,12 @@
     "require": {
         "yiisoft/yii": "1.1.15",
         "clevertech/yii-booster": "dev-master",
-        "phpmailer/phpmailer": "5.2.8"
+        "phpmailer/phpmailer": "dev-master"
     },
     "authors": [
         {
-            "name": "asasmoyo",
-            "email": "arbak.kotakz@gmail.com"
+            "name": "Arba Sasmoyo",
+            "email": "asasmoyo@student.uns.ac.id"
         }
     ],
     "minimum-stability": "stable"

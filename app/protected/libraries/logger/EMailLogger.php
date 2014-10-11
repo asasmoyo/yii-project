@@ -1,6 +1,6 @@
 <?php
 
-class EMailLogger extends CEmailLogRoute
+class EmailLogger extends CEmailLogRoute
 {
 
     public $smtpServer;

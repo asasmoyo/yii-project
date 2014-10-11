@@ -15,7 +15,6 @@ return array(
     'import' => array(
         'application.models.*',
         'application.components.*',
-        'application.components.baseController.*',
         'application.libraries.*',
         'application.libraries.widgets.*',
         'application.libraries.logger.*',
@@ -40,6 +39,7 @@ return array(
             'allowAutoLogin' => true,
         ),
         'urlManager' => array(
+            'urlFormat' => 'path',
             'showScriptName' => false,
         ),
         'errorHandler' => array(
